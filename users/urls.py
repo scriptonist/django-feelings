@@ -1,3 +1,6 @@
 from django.conf.urls import url, include
-
-urlpatterns = [url('^', include('django.contrib.auth.urls'), )]
+from . import views
+urlpatterns = [
+    url('^dashboard/$',views.dashboard,name='dashboard'),
+    url('^', include('django.contrib.auth.urls'))
+]
