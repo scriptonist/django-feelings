@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %} Logout | {{block.super}}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>You Sure ?</h3>
+            <form method="POST">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" value='logout' class='btn btn-primary'>
+            </form>
+        </div>
+        <div class="col-md-6">
+           <h3>Come back soon!</h3>
+           <p>
+               This site works best if you comeback here often!
+           </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
