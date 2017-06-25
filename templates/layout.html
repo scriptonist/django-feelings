@@ -39,7 +39,7 @@
             <ul class="nav navbar-nav navbar-right">
             {% if not user.is_authenticated %}
                <li><a href="{% url 'users:login'%}">Login</a></li>
-               <li><a href="#">Sign Up</a></li>
+               <li><a href="{%url 'users:signup' %}">Sign Up</a></li>
             {% else %}
             
                 <li><a href="#">Record</a></li>
