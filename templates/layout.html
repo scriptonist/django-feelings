@@ -42,7 +42,7 @@
                <li><a href="{%url 'users:signup' %}">Sign Up</a></li>
             {% else %}
             
-                <li><a href="#">Record</a></li>
+                <li><a href="{%url 'users:dashboard'%}">Record</a></li>
                 <li><a href="{% url 'users:logout'%}">Logout</a></li>
             
             {% endif %}
